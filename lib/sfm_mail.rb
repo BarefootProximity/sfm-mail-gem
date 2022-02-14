@@ -3,7 +3,7 @@ require 'httparty'
 class SfmMail
   def self.send(mail)
     @from_name = mail[:from].display_names[0] || ''
-    @from = mail.from[0].gsub(from_name, '').gsub('\u003c', '').gsub('\u003e', '')
+    @from = mail.from[0].gsub(@from_name, '').gsub('\u003c', '').gsub('\u003e', '')
 
     data = SfmMail.get_recipients_data(contact_recipient, {
                                                    SubscriberAttributes: {
