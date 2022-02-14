@@ -5,6 +5,9 @@ class SfmMail
     @from_name = mail[:from].display_names[0] || ''
     @from = mail.from[0].gsub(@from_name, '').gsub('\u003c', '').gsub('\u003e', '')
 
+    contact_recipient = mail[:to].addresses
+    is_multiple_recipient = contact_recipient.length > 1
+    api_path = "messaging/v1/messageDefinitionSends/key:#{ENV['SFM_SEND_KEY']}/#{is_multiple_recipient ? 'sendBatch' : 'send'}"
     data = SfmMail.get_recipients_data(contact_recipient, {
                                                    SubscriberAttributes: {
                                                      BodyContentText: mail.body.raw_source,
