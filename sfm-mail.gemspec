@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'SFM  Mail'
+  s.name        = 'sfm_mail'
   s.version     = '1.0.0'
   s.summary     = "SFM Mail"
   s.description = "A simple gem to integrate SF Marketingcloud Mail"
