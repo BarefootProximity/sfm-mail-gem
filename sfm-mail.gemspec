@@ -8,7 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ['Barefoot']
   s.email       = 'gehu.pierre@barefootproximity.com'
   s.files       = ['lib/sfm_mail.rb']
-  s.homepage    =
+  s.required_ruby_version = '>= 2.7.0'
+  s.homepage =
     'https://github.com/BarefootProximity/sfm-mail-gem'
   s.license = 'MIT'
 end
