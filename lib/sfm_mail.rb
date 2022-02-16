@@ -4,8 +4,6 @@ require 'httparty'
 
 # Service to send transactional email via HTTP to SF Marketingcloud Mail
 class SfmMail
-  # before_action :fetch_api_props, only: [:send]
-
   def self.send(mail)
     fetch_required_props(mail)
     is_multiple = mail[:to].addresses.length > 1
