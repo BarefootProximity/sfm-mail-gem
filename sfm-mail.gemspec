@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.summary     = 'SFM Mail'
   s.description = 'A simple gem to integrate SF Marketingcloud Mail'
   s.authors     = ['Barefoot']
-  s.email       = 'gehu.pierre@barefootproximity.com'
+  s.email       = 'accounts@barefootproximity.com'
   s.files       = ['lib/sfm_mail.rb']
   s.required_ruby_version = '>= 2.7.0'
   s.homepage =
